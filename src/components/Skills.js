@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import meter1 from "../assets/img/html.png";
 import meter2 from "../assets/img/css.png";
 import meter3 from "../assets/img/Ai.png";
+import colorSharp from "../assets/img/gray.png"
 
 export const Skills = () => {
     const responsive = {
@@ -56,6 +57,8 @@ export const Skills = () => {
               </Col>
             </Row>
           </Container>
+
+          <img className="background-image-left" src={colorSharp} alt="Image" />
 
         </section>
       )

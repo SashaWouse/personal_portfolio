@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-// import logo from '../assets/';
+import logo from '../assets/img/logo.png';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -26,8 +26,8 @@ export const NavBar = () => {
     return (
         <Navbar bg="light" expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        {/* <img src={logo} alt="Logo" /> */}
-        <Navbar.Brand href="#home">WouseDesign</Navbar.Brand>
+        {/* <img src={logo} alt="Logo"/> */}
+        <Navbar.Brand href="#home"><img src={logo} alt="Logo"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
