@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/fb_icon.svg";
 import navIcon2 from "../assets/img/link_icon.svg";
-import navIcon3 from "../assets/img/git_icon.svg";
+import navIcon3 from "../assets/img/github.svg";
 
 export const Footer = () => {
     return (
