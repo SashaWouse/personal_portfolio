@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from '../assets/img/logo.png';
 import navIcon1 from "../assets/img/facebook_svg.svg";
 import navIcon2 from "../assets/img/linkedin_svg.svg";
 import navIcon3 from "../assets/img/git_iconsvg.svg";
@@ -30,8 +29,8 @@ export const NavBar = () => {
     return (
         <Navbar bg="light" expand="lg" className={scrolled ? "scrolled" : ""}>
           <Container>
-            <Navbar.Brand href="#home"><img src={logo} alt="Logo"/></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Brand href="#home"><span className="brand-logo"><span class="word">Wouse</span> Design</span></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
