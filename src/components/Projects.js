@@ -12,73 +12,94 @@ export const Projects = () => {
         title: "Business Startup",
         description: "Design & Development",
         imgUrl: projImg1,
+        baseUrl: "http://github.com",
     },
     {
         title: "Business Startup",
         description: "Design & Development",
         imgUrl: projImg2,
+        baseUrl: "http://github.com",
     },
     {
         title: "Business Startup",
         description: "Design & Development",
         imgUrl: projImg3,
-    },
-    {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg1,
-    },
-    {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg2,
-    },
-    {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg3,
-    },
+        baseUrl: "http://github.com",
+    }
     ];
+
+    const apps = [
+        {
+            title: "Food App",
+            description: "Design & Development",
+            imgUrl: projImg1,
+            baseUrl: "http://github.com",
+        },
+        {
+            title: "Language App",
+            description: "Design & Development",
+            imgUrl: projImg2,
+            baseUrl: "http://github.com",
+        },
+        {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: projImg3,
+            baseUrl: "http://github.com",
+        }
+        ];
     
     return(
         <section className="project" id="projects">
             <Container>
                 <Row>
-                    <Col>
-                        <h2>My Projects</h2>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                            <Nav.Item>
-                            <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                            <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                            <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                        <Tab.Content>
-                            <Tab.Pane eventKey="first">
+                    <Col size={12}>
+                            <h2>My Projects</h2>
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                                <Nav.Item>
+                                <Nav.Link eventKey="first">Webpages</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                <Nav.Link eventKey="second">Mobile apps</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                <Nav.Link eventKey="third">Other</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                            <Tab.Content>
+                                <Tab.Pane eventKey="first">
+                                    <Row>
+                                        {
+                                            projects.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                    key={index}
+                                                    {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="second">
                                 <Row>
-                                    {
-                                        projects.map((project, index) => {
-                                            return (
-                                                <ProjectCard
-                                                key={index}
-                                                {...project}
-                                                />
-                                            )
-                                        })
-                                    }
-                                </Row>
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="second">Loren Inspum</Tab.Pane>
-                            <Tab.Pane eventKey="third">Loren Inspum</Tab.Pane>
-                        </Tab.Content>
-                        </Tab.Container>
-                    
+                                        {
+                                            apps.map((app, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                    key={index}
+                                                    {...app}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="third">Loren Inspum</Tab.Pane>
+                            </Tab.Content>
+                            </Tab.Container>                    
                     </Col>
                 </Row>
             </Container>

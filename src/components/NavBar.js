@@ -27,7 +27,7 @@ export const NavBar = () => {
   }
 
     return (
-        <Navbar bg="light" expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Navbar bg="transparent" expand="lg" className={scrolled ? "scrolled" : ""}>
           <Container>
             <Navbar.Brand href="#home"><span className="brand-logo"><span class="word">Wouse</span> Design</span></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
